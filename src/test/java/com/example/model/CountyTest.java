@@ -8,11 +8,11 @@ public class CountyTest {
 	void test() {
 		var c =  new Country();
 		c.setName("ara");
-		c.setPopulation(100);
+		c.setPopulation(100L);
 		System.out.println(c);
 		
 		var c2 = 
-		Country.builder().code2("4").headofstate("ARA").build();
+		Country.builder().code2("4").headOfState("ARA").build();
 		System.out.println(c2);
 	}
 }
