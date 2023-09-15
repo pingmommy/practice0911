@@ -7,6 +7,37 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<style>
+* {
+	padding: 10px;
+}
+
+#heading {
+	color: blue;
+}
+
+td {
+	border: 1px solid red;
+}
+
+#heading, td {
+	text-decoration: underline;
+}
+
+tbody > tr:hover{
+	background: lightpink;
+}
+
+#continent option {
+	color: Green;
+}
+
+/*
+#continent option ||  #heading, td 의 차이 : ,가 없으면 아이디에 해당하는 태그의 자식태그들 중 스타일타겟 중 2번 째 요소에 해당하는 태그들한테 스타일을 적용한다는 의미 
+  */
+</style>
+
+
 <script type="text/javascript">
 window.onload = function(){
 	
@@ -44,15 +75,7 @@ window.onload = function(){
 }
 
 
-// region = document.forms[0].region
-// region.innerHTML
-// option = document.createElement('option')
-//option.value=""
-//option.innerHTML =$
-//region.append
-//for(let region of regions){let option = document.createElement('option') option.value= region option.innerHTML =region
-	
-//	window.region.append}
+
 
 
 function setRegions(regions){
@@ -100,7 +123,8 @@ function setRegions(regions){
 </script>
 </head>
 <body>
-<h1>COUNTRY LIST</h1>
+<h1 id="heading">1.COUNTRY LIST</h1>
+<h1 id="heading">2.COUNTRY LIST</h1>
 <hr>
 <form action="/country/list">
 <select name="continent" id="continent" onchange="changeSelect()">
